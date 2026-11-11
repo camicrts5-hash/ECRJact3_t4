@@ -73,7 +73,7 @@ El proyecto fue desplegado de forma independiente para no afectar las entregas a
 ---
 
 ## Enlaces de Entrega
-*   **Repositorio de GitHub:** [https://github.com/camicrts5-hash/CAMCact3_t4](https://github.com/camicrts5-hash/CAMCact3_t4)
+*   **Repositorio de GitHub:** [https://github.com/camicrts5-hash/ECRJact3_t4](https://github.com/camicrts5-hash/ECRJact3_t4)
 *   **Proyecto en VPS (Actividad 3):** [http://18.218.44.223:8087/productos](http://18.218.44.223:8087/productos)
 *   **Proyecto Actividad 1:** [http://18.218.44.223:8081/detalle_info2](http://18.218.44.223:8081/detalle_info2)
 *   **Proyecto Actividad 2:** [http://18.218.44.223:8084/tienda/productos](http://18.218.44.223:8084/tienda/productos)
