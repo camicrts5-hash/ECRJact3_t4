@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Productos</title>
+    <style>
+        table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+        th, td { border: 1px solid black; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h1>CRUD de Productos</h1>
+    <a href="/productos/nuevo">➕ Agregar Nuevo Producto</a>
+    <br><br>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Stock</th>
+                <th>Categoría</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="prod : ${productos}">
+                <td th:text="${prod.id}"></td>
+                <td th:text="${prod.nombre}"></td>
+                <td th:text="${prod.precio}"></td>
+                <td th:text="${prod.stock}"></td>
+                <!-- Aquí se ve la relación (Nombre de la categoría) -->
+                <td th:text="${prod.categoria != null ? prod.categoria.nombre : 'Sin categoría'}"></td>
+                <td>
+                    <a th:href="@{/productos/editar/{id}(id=${prod.id})}"> Editar</a> | 
+                    <a th:href="@{/productos/eliminar/{id}(id=${prod.id})}" onclick="return confirm('¿Seguro que deseas eliminar?')">Eliminar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
